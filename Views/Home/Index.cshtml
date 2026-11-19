@@ -1,0 +1,9 @@
+@model Dashboard
+<section class="actions"><form method="post" asp-action="Customer"><h2>Register customer</h2>
+<label>Full name<input name="fullName" maxlength="100" required></label><label>Meter number<input name="meter" maxlength="30" required></label>
+<label>Address<input name="address" maxlength="200" required></label><button>Add customer</button></form>
+<form method="post" asp-action="Reading"><h2>Record meter reading</h2><label>Customer ID<input type="number" name="customerId" min="1" required></label>
+<label>Reading date<input type="date" name="date" max="@DateTime.Today.ToString("yyyy-MM-dd")" required></label>
+<label>Cumulative units (kWh)<input type="number" name="units" min="0" max="100000000" required></label>
+<p class="hint">The first reading sets the baseline. Subsequent usage is billed at ₹6.50 per kWh.</p><button>Save reading</button></form></section>
+<partial name="_Grids" model="Model" />

@@ -1,0 +1,8 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Electricity Billing &amp; Customer Management System</title>
+<link rel="stylesheet" href="/app.css"><script src="/app.js" defer></script></head>
+<body><header><nav><a class="brand" asp-action="Index">GridDesk</a>
+</nav></header>
+<main><div class="hero"><span>Metering and billing operations</span><h1>Electricity Billing &amp; Customer Management System</h1></div>
+@if(TempData["Feedback"] is string feedback){<p class="notice" role="status">@feedback</p>}
+@RenderBody()</main></body></html>
